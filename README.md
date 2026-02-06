@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Employee Directory Application
 
-## Getting Started
+This project is a full-stack Employee Directory application built as part of the SPACE AI MERN Stack Internship assignment.  
+It uses Node.js with GraphQL and MongoDB for the backend and Next.js (App Router) for the frontend.
 
-First, run the development server:
+---
 
+## 🚀 Tech Stack
+
+### Backend
+- Node.js
+- Apollo Server 4
+- GraphQL
+- MongoDB (Node.js Driver – no Mongoose)
+
+### Frontend
+- Next.js (App Router)
+- GraphQL Client
+- Tailwind CSS
+- Client & Server Components
+
+---
+
+## 📦 Features Implemented
+
+### Backend
+- GraphQL API using Apollo Server
+- MongoDB connection using native driver
+- Employee schema with fields:
+  - id, name, position, department, salary
+- Queries:
+  - `getAllEmployees`
+  - `getEmployeeDetails(id)`
+- Mutation:
+  - `addEmployee`
+- Proper error handling for invalid IDs
+- `_id` to `id` mapping at GraphQL layer
+
+---
+
+### Frontend
+- Home page listing employees in a table
+- Department-based filtering
+- Add New Employee modal with form validation
+- Optimistic UI update after adding employee
+- Employee Detail page (`/employee/[id]`)
+- Back navigation to home page
+- Loading and error handling states
+- Responsive UI using Tailwind CSS
+
+---
+
+## 🧭 Pages
+
+- `/`  
+  Displays all employees with department filter and add employee option
+
+- `/employee/[id]`  
+  Displays full details of a selected employee
+
+---
+
+## 🧠 Architecture Highlights
+
+- Server Components used for data fetching (SEO & performance)
+- Client Components handle interactivity and UI state
+- GraphQL used for efficient data querying
+- Modular and scalable component structure
+
+---
+
+## ▶️ How to Run Locally
+
+### 1. Clone Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone <your-repo-url>
+cd <project-folder>
