@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import { gqlClient } from "@/services/gqlclient";
 import { GET_EMPLOYEE_DETAILS } from "@/app/api/graphql/queries";

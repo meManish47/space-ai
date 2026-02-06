@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import EmployeeDirectory from "@/components/employeDirectory";
 import { gqlClient } from "@/services/gqlclient";
 import { GET_ALL_EMPLOYEES } from "./api/graphql/queries";
